@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #174C3C;
+    --color-primary-dark: #0f3429;
+    --color-primary-light: #20634f;
+    --color-gold: #D5B779;
+    --color-gold-dark: #be9d58;
+    --color-gold-light: #ecdcb9;
+    --color-background: #F8F5EC;
+    --color-surface: #FFFFFF;
+    --color-text: #202824;
+    --color-muted: #68736C;
+    --color-border: #E6E0D2;
+    --color-hover: #E8EFE8;
+    --color-success: #26734D;
+    --color-warning: #A66B12;
+    --color-error: #C0392B;
+
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    max-width: none;
+    border: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom styling helpers */
+.font-serif-heading {
+  font-family: var(--font-heading);
+}
+
+.font-sans-body {
+  font-family: var(--font-body);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5B779;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #174C3C;
+}
